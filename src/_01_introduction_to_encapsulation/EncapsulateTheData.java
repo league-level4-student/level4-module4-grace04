@@ -31,4 +31,44 @@ public class EncapsulateTheData {
 	public static void main(String[] args) {
 		
 	}
+	
+	int getItemsReceived() {
+		return itemsReceived;
+	}
+	
+	void setItemsReceived(int x) {
+		itemsReceived = x;
+		if(x>0)
+			itemsReceived = 0;
+	}
+	
+	float getDegreesTurned() {
+		return degreesTurned;
+	}
+	
+	void setDegreesTurned(float x) {
+		degreesTurned = x;
+		if(x<0.0)
+			degreesTurned = 0;
+		else if(x>360.0)
+			degreesTurned = 360;
+	}
+	
+	String getNomenclature() {
+		return nomenclature;
+	}
+	
+	void setNomenclature(String s) {
+		nomenclature = s;
+		if(s.isEmpty())
+			nomenclature = " ";
+	}
+	
+	Object getMemberObj() {
+		return memberObj;
+	}
+	
+	void setMemberObj(Object obj) {
+		
+	}
 }
