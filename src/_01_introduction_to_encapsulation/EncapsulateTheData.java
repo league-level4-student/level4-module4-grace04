@@ -38,7 +38,7 @@ public class EncapsulateTheData {
 	
 	void setItemsReceived(int x) {
 		itemsReceived = x;
-		if(x>0)
+		if(x<0)
 			itemsReceived = 0;
 	}
 	
@@ -69,6 +69,8 @@ public class EncapsulateTheData {
 	}
 	
 	void setMemberObj(Object obj) {
-		
+		if(obj instanceof String)
+			obj = new Object();
+		memberObj = obj;
 	}
 }
