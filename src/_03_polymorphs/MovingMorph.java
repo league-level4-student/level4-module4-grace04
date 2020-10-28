@@ -17,6 +17,6 @@ public class MovingMorph extends Polymorph {
 	
 	@Override
 	public void update() {
-		
+		setX(getX()+1);
 	}
 }
