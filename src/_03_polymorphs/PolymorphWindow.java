@@ -40,13 +40,15 @@ public class PolymorphWindow extends JPanel implements ActionListener{
    	 redMor = new RedMorph(20, 60, 20, 20);
    	 moveMor = new MovingMorph(20, 100, 20, 20);*/
    	 
-   	 for(int i=0;i<6;i++) {
-   		 if(i%3==0)
-   			 mor.add(new BluePolymorph(20, i*3*20+20, 20, 20));
-   		 else if(i%3==1)
-   			 mor.add(new RedMorph(20, i*3*20+20, 20, 20));
+   	 for(int i=0;i<4;i++) {
+   		 if(i%4==0)
+   			 mor.add(new CircleMorph(25, i*4*25+25, 25, 25));
+   		 else if(i%4==1)
+   			 mor.add(new FollowMorph(25, i*4*25+25, 25, 25));
+   		 else if(i%4==2)
+   			 mor.add(new ImageMorph(25, i*4*25+25, 25, 25));
    		 else
-   			 mor.add(new MovingMorph(20, i*3*20+20, 20, 20));
+   			 mor.add(new ClickMorph(25, i*4*20+25, 25, 25));
    	 }
    	 
    	 
